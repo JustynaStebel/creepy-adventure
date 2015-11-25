@@ -11,4 +11,5 @@
 config/initializers/secret_token.rb
 config/secrets.yml
 /spec/tmp
+public/uploads/tmp/
 

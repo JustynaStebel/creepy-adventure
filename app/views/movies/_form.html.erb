@@ -19,14 +19,14 @@
   <p><%= f.label :year %></p>
   <%= f.text_field :year %>
 
-  <p><%= f.label :category %></p>
-  <%= f.text_field :category_name %>
+  <p><%= f.label :category_name %></p>
+  <%= f.select :category_name, ['Choose...'] + Movie::CATEGORIES %>
 
   <p><%= f.label :description %></p>
   <%= f.text_area :description %>
 
   <p><%= f.label :cover %></p>
-  <%= f.file_field :cover %>
+  <%= f.file_field :cover, multiple: true %>
 
   <p><%= f.submit %></p>
 <% end %>

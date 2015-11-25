@@ -10,9 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.0'
-gem 'carrierwave'
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
-gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug'

@@ -1,5 +1,6 @@
 class Movie < ActiveRecord::Base
-  belongs_to :category
   mount_uploader :cover, CoverUploader
-  validates_presence_of :title, :year, :category, :description
+  validates_presence_of :title, :year, :description
+  CATEGORIES = ["Horror", "Thriller", "Action", "Comedy"]
+  validates :category_name, inclusion: { in: CATEGORIES }
 end

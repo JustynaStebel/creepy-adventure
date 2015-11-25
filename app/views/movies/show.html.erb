@@ -10,7 +10,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @movie.category %>
+  <%= @movie.category_name %>
 </p>
 
 <p>
@@ -20,7 +20,7 @@
 
 <p>
   <strong>Cover:</strong>
-  <%= @movie.cover %>
+  <%= image_tag @movie.cover_url(:full) %>
 </p>
 
 <%= link_to 'Back to movies', movies_path %>

@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/carrierwaveuploader/carrierwave.git
+  revision: d6e7a4480ae595ad28f4cd19c5b1c6a7918b015f
+  specs:
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,11 +56,6 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.0)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -68,10 +73,6 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    dotenv (2.0.2)
-    dotenv-rails (2.0.2)
-      dotenv (= 2.0.2)
-      railties (~> 4.0)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -201,10 +202,9 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
-  carrierwave
+  carrierwave!
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.0)
-  dotenv-rails
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails

@@ -38,12 +38,13 @@ class MoviesController < ApplicationController
 
   def destroy
     @movie.destroy
+    redirect_to @movie
   end
 
   private
 
   def movie_params
-    params.require(:movie).permit(:title, :year, :cover, :description, :category_name, :category_id)
+    params.require(:movie).permit(:title, :year, :description, :category_name, :cover)
   end
 
   def movie_find
