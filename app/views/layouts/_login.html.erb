@@ -1,0 +1,8 @@
+<% if current_user %>
+  Signed in!
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Register", new_user_registration_path %>
+  <%= link_to "Login", new_user_session_path %>
+  <h1> Log in or register to create your movie collection for free! </h1>
+<% end %>
