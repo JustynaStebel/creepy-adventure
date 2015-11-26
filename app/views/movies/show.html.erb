@@ -1,26 +1,27 @@
-<p>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
+<div class="movies">
+  <p>
+    <strong>Title:</strong>
+    <%= @movie.title %>
+  </p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @movie.year %>
-</p>
+  <p>
+    <strong>Year:</strong>
+    <%= @movie.year %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @movie.category_name %>
-</p>
+  <p>
+    <strong>Category:</strong>
+    <%= @movie.category_name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @movie.description %>
+  </p>
 
-<p>
-  <strong>Cover:</strong>
-  <%= image_tag @movie.cover_url(:full) %>
-</p>
+  <p>
+    <%= image_tag @movie.cover_url(:full) %>
+  </p>
 
-<%= link_to 'Back to movies', movies_path %>
+  <%= link_to 'Back to movies', movies_path %>
+</div>

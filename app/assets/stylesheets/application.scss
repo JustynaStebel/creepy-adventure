@@ -3,24 +3,36 @@
 @import url(https://fonts.googleapis.com/css?family=Creepster);
 
 body {
-  color: black;
-  margin: 150px;
+  text-align: center;
+  color: white;
+  margin: 0 150px 0 150px;
   background-image: url(http://41.media.tumblr.com/4fbd93ca281bd434bc208312c0b48eab/tumblr_ncn8q7zm4X1s1vn29o1_1280.jpg);
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 h1.welcome {
   font-family: 'Creepster', cursive;
-  text-align: center;
   top: -200px;
 }
 h3.login {
-  text-align: center;
   padding: 10px;
 }
 .register, .log {
-  text-align: center;
   padding-top: 0;
 }
+th, td {
+  padding: 5px;
+  width: auto;
+  text-align: center;
+}
+input, button, select, textarea {
+  color: black;
+  text-align: center;
+}
+input#movie_cover {
+  margin-left: 400px;
+  padding-bottom: 10px;
+}
+

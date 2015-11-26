@@ -1,34 +1,36 @@
-<%= form_for @movie do |f| %>
-  <% if @movie.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@movie.errors.count, "error") %> prohibited
-        this movie from being saved:
-      </h2>
-      <ul>
-        <% @movie.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+<div class="movies">
+  <%= form_for @movie do |f| %>
+    <% if @movie.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@movie.errors.count, "error") %> prohibited
+          this movie from being saved:
+        </h2>
+        <ul>
+          <% @movie.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p><%= f.label :title %></p>
+    <%= f.text_field :title %>
+
+    <p><%= f.label :year %></p>
+    <%= f.text_field :year %>
+
+    <p><%= f.label :category_name %></p>
+    <%= f.select :category_name, ['Choose...'] + Movie::CATEGORIES %>
+
+    <p><%= f.label :description %></p>
+    <%= f.text_area :description %>
+
+    <p><%= f.label :cover %></p>
+    <%= f.file_field :cover %>
+
+    <p><%= f.submit %></p>
   <% end %>
 
-  <p><%= f.label :title %></p>
-  <%= f.text_field :title %>
-
-  <p><%= f.label :year %></p>
-  <%= f.text_field :year %>
-
-  <p><%= f.label :category_name %></p>
-  <%= f.select :category_name, ['Choose...'] + Movie::CATEGORIES %>
-
-  <p><%= f.label :description %></p>
-  <%= f.text_area :description %>
-
-  <p><%= f.label :cover %></p>
-  <%= f.file_field :cover %>
-
-  <p><%= f.submit %></p>
-<% end %>
-
-<%= link_to 'Back to movies', movies_path %>
+  <%= link_to 'Back to movies', movies_path %>
+</div>
