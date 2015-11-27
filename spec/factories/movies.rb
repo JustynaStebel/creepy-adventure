@@ -2,9 +2,8 @@ FactoryGirl.define do
   factory :movie do
     title "MyString"
     year "MyString"
-    cover "MyString"
+    category_name "MyString"
     description "MyText"
-    category "MyString"
   end
 
 end
